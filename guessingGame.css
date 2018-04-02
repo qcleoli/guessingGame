@@ -1,0 +1,123 @@
+*{
+    //border: black solid 3px;
+    text-align: center;
+    margin:0px;
+    padding:0px;
+}
+body{
+    min-width: 418px;
+    //background-image: url(images/bg1.jpg);
+}
+
+h1, h2{
+    text-align: center;
+}
+h1{
+    display: inline-block;
+    font-family: 'Berkshire Swash', cursive;
+}
+h2{
+    margin-top: 12px;
+    font-family: 'Niconne', cursive;
+    //font-family: 'Great Vibes', cursive;
+}
+
+#footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: solid black 6px;
+    padding-top: 20px;
+    background-color: white;
+}
+
+#footer img, h4{
+    display: inline-block;
+    width: 32vw;
+    vertical-align: middle;
+    padding: 0;
+}
+
+button{
+    padding: 10px 14px;
+    border: none;
+    //background-color: rgb(154, 135, 154);
+    font-size: large;
+}
+li{
+    display: inline-block;
+    padding: 7px 20px;
+    border: solid 2px #40cac0;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-radius: 13px;
+
+}
+input{
+    position: relative;
+    left: 3vw;
+    padding: 25px;
+    min-width: 100px;
+    min-height: 100px;
+    width: 25vh;
+    height: 25vh;
+    border-radius: 50%;
+    font-size: 60px;
+    font-family: 'Courgette', cursive;
+    border: #3594e5 outset 3px;
+}
+*:focus{
+    outline: none;
+}
+#main{
+    font-size: 40px;
+    margin-top: 10px; 
+    //padding:30px 0;   
+    background-image: url(images/bg1.jpg);
+    //background-repeat: no-repeat;
+    //background-size: 130%;
+    background-color: rgba(255, 0, 0, 0.9);
+}
+#reset{
+    font-family: 'Black Ops One', cursive;
+    color:#e30a67b8;
+    margin-right: 50px;
+    background-color: rgba(255, 255, 255,0.1);
+}
+#hint{
+    font-family: 'Marck Script', cursive;  
+    background-color: rgba(255, 255, 255,0.1);
+}
+#go{
+    position: relative;
+    left: -40px;
+    top: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: #93e041 solid 2px;
+}
+@keyframes letterG{
+    from{
+        position:absolute;
+        color: cadetblue;
+        font-size: 500px;        
+        font-family: 'Marck Script', cursive;
+    }
+    to{
+        position:absolute;
+        color: black;
+        font-size:2em;
+    }
+}
+#g{
+    animation:letterG 0.8s cubic-bezier(0.4, 0, 1, 1) 2 alternate-reverse;
+}
+button, input{
+    opacity: 0.9;
+}
+#mainBgc{
+    background-color:rgba(255, 255, 255, 0.8);
+    padding: 25px 0;
+}
+
