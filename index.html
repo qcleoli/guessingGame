@@ -14,6 +14,9 @@
         A list of previous guesses
         A fun design!
         A new Github Repository for the Guessing Game
+    
+    Part 2: set up JS file
+    Part 3: link HTML and JS through jQuery
 -->
 
 <!DOCTYPE html>
@@ -21,6 +24,8 @@
     <head>
         <title>Foundations project Guessing Game</title>
         <link rel='stylesheet' type='text/css' href='guessingGame.css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src='guessingGameJQuery.js'></script>
         <script src='guessingGame.js'></script>
         <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Black+Ops+One|Chicle|Courgette|Great+Vibes|Marck+Script|Niconne" rel="stylesheet">
     </head>
@@ -31,8 +36,12 @@
 
         <div id='main'>
             <div id='mainBgc'>
+                <div id='hintDisplay'></div>
+                <div id='resDisplay'>
+                    <p></p>
+                </div>
                 <div>
-                    <input placeholder='?' maxlength='3'>
+                    <input id='guessInput' placeholder='?' maxlength='3' value=''>
                     <button id='go'>Go!</button>
                 </div>
 

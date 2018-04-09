@@ -21,7 +21,7 @@ Game.prototype.isLower = function(){
     return this.playersGuess < this.winningNumber;
 }
 Game.prototype.playersGuessSubmission = function(num){
-    if(isNaN(num) || num*1 < 1 || num * 1 > 100) throw 'That is an invalid guess.';
+    if(isNaN(num*1) || num*1 < 1 || num * 1 > 100) throw 'That is an invalid guess.';
     else{
         this.playersGuess = num;
         return this.checkGuess();  
@@ -29,8 +29,10 @@ Game.prototype.playersGuessSubmission = function(num){
 }
 Game.prototype.checkGuess = function(){
     var outcome='';
-    if(this.playersGuess === this.winningNumber) outcome = 'You Win!';
-    else if(this.pastGuesses.indexOf(this.playersGuess)>=0) outcome = 'You have already guessed that number.';
+    if(this.playersGuess == this.winningNumber){
+        outcome = 'You Win!';
+        this.pastGuesses.push(this.playersGuess);
+    }else if(this.pastGuesses.indexOf(this.playersGuess)>=0) outcome = 'You have already guessed that number.';
     else{
         this.pastGuesses.push(this.playersGuess);
         var d1 = this.difference();
@@ -39,7 +41,7 @@ Game.prototype.checkGuess = function(){
         else if(d1 < 25) outcome = 'You\'re lukewarm.';
         else if(d1 < 50) outcome = 'You\'re a bit chilly.';
         else outcome = 'You\'re ice cold!';
-    } 
+    }
     return outcome;
 }
 Game.prototype.provideHint = function(){

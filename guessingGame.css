@@ -33,7 +33,7 @@ h2{
 
 #footer img, h4{
     display: inline-block;
-    width: 27vw;
+    width: 25vw;
     vertical-align: middle;
     padding: 0;
 }
@@ -72,30 +72,34 @@ input{
 #main{
     font-size: 40px;
     margin-top: 10px; 
+    height: 90vh;
     //padding:30px 0;   
     background-image: url(images/bg1.jpg);
-    background-repeat: repeat-y;
+    //background-repeat: repeat-y;
     //background-size: 130%;
     background-color: rgba(255, 0, 0, 0.9);
 }
 #reset{
     font-family: 'Black Ops One', cursive;
+    font-size: 1em;
     color:#e30a67b8;
     margin-right: 50px;
-    background-color: rgba(255, 255, 255,0.1);
+    background-color: rgba(255, 255, 255,0);
 }
 #hint{
-    font-family: 'Marck Script', cursive;  
-    background-color: rgba(255, 255, 255,0.1);
+    font-family: 'Marck Script', cursive; 
+    font-size: 1em; 
+    background-color: rgba(255, 255, 255,0);
 }
 #go{
     position: relative;
-    left: -40px;
+    left: -30px;
     top: 50px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: #93e041 solid 2px;
+    opacity: 1;
 }
 @keyframes letterG{
     from{
@@ -111,7 +115,7 @@ input{
     }
 }
 #g{
-    animation:letterG 0.8s cubic-bezier(0.4, 0, 1, 1) 2 alternate-reverse;
+    animation:letterG 0.5s ease-in-out 2 alternate-reverse;
 }
 button, input{
     opacity: 0.9;
@@ -119,8 +123,43 @@ button, input{
 #mainBgc{
     background-color:rgba(255, 255, 255, 0.8);
     padding: 25px 0;
-}
-#mainBgc, #main{    
     height: 90vh;
+}
+
+#resDisplay{
+    position: absolute;
+    font-family: 'Great+Vibes', cursive;
+    width: 30vw;
+    transform: rotate(40deg);
+    right: 5vw;
+    color: cornflowerblue;
+    //animation: results 2s cubic-bezier(1, -0.18, 0.37, 1.21);
+}
+
+.move{
+    animation: results 2s cubic-bezier(1, -0.18, 0.37, 1.21);
+}
+
+@keyframes results{
+    0%{
+        left: 5vw;
+        top: 70vh;
+    }
+    30%{
+        top: 47vh;
+        left: 50vw;
+        transform: rotate(0deg);
+        z-index: 1;
+    }
+}
+
+#hintDisplay{
+    position: absolute;
+    left: 5vw;
+    top: 30vh;
+    font-family: 'Niconne', cursive;
+    font-size: 1em;
+    width: 20vw;
+    color: chocolate;
 }
 
