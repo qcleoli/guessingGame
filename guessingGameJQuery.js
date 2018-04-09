@@ -22,11 +22,10 @@ $(document).ready(function(){
             $('li').eq(position).text(game.pastGuesses[position]);
         }
 
-
         $('#resDisplay').find('p').text(outcome);
         $('#resDisplay').addClass('move');
         $('#guessInput').val('');
-        
+        if(outcome == 'You Win!' || outcome == 'You Lose.') gameEnded();
     });
 
     $('#guessInput').on('keyup', function(){
@@ -41,13 +40,9 @@ $(document).ready(function(){
     });
     //Game ends disable input, go button, hint button
     function gameEnded(){
-        disableProp('#guessInput', true);
-        disableProp('#go', true);
-        disableProp('#hint', true);
-    }
-
-    function disableProp(element, yesNo){
-        $(element).prop('disable', yesNo);
+        $('#guessInput').prop('disabled', true);
+        $('#go').prop('disabled', true);
+        $('#hint').prop('disabled', true);
     }
     //When the hint button is clicked, displays the hint
     $('#hint').on('click', function(){
