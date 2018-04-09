@@ -25,7 +25,7 @@ $(document).ready(function(){
         $('#resDisplay').find('p').text(outcome);
         $('#resDisplay').addClass('move');
         $('#guessInput').val('');
-        if(outcome == 'You Win!' || outcome == 'You Lose.') gameEnded();
+        if(outcome == 'You Win!' || outcome == 'You Lose.') gameEnded(true);
     });
 
     $('#guessInput').on('keyup', function(){
@@ -39,10 +39,14 @@ $(document).ready(function(){
         $(this).animate({width: '60px', height:'60px'}, 'fast');
     });
     //Game ends disable input, go button, hint button
-    function gameEnded(){
-        $('#guessInput').prop('disabled', true);
-        $('#go').prop('disabled', true);
-        $('#hint').prop('disabled', true);
+    function gameEnded(yesNo){
+        disableProp('#guessInput', yesNo);
+        disableProp('#go', yesNo);
+        disableProp('#hint', yesNo);
+    }
+
+    function disableProp(element, yesNo){
+        $(element).prop('disabled', yesNo);
     }
     //When the hint button is clicked, displays the hint
     $('#hint').on('click', function(){
@@ -56,6 +60,7 @@ $(document).ready(function(){
         $('li').text('-');
         game.pastGuesses = [];
         $('#resDisplay').find('p').text('');
+        gameEnded(false);
 
     })
 })
