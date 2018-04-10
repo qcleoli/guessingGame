@@ -60,6 +60,7 @@ $(document).ready(function(){
         $('li').text('-');
         game.pastGuesses = [];
         $('#resDisplay').find('p').text('');
+        $('#hintDisplay').find('p').text('');
         gameEnded(false);
 
     })
