@@ -57,7 +57,7 @@ function newGame(){
 */
 
 function generateWinningNumber(){
-    return Math.round(Math.random() * 100 + 1);
+    return Math.round(Math.random() * 99 + 1);
 }
 
 /*
