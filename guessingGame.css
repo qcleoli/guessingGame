@@ -86,11 +86,20 @@ input{
     margin-right: 50px;
     background-color: rgba(255, 255, 255,0);
 }
+
+#reset: hover{
+    transform: translate(-12px);
+}
 #hint{
     font-family: 'Marck Script', cursive; 
     font-size: 1em; 
     background-color: rgba(255, 255, 255,0);
 }
+
+#hint: hover{
+    transform: translate(12px);
+}
+
 #go{
     position: relative;
     left: -30px;
