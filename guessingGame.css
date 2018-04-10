@@ -87,7 +87,7 @@ input{
     background-color: rgba(255, 255, 255,0);
 }
 
-#reset: hover{
+#hint:hover{
     transform: translate(-12px);
 }
 #hint{
@@ -96,7 +96,7 @@ input{
     background-color: rgba(255, 255, 255,0);
 }
 
-#hint: hover{
+#hint:hover{
     transform: translate(12px);
 }
 
